@@ -18,6 +18,10 @@ java {
 
 repositories {
 	mavenCentral()
+    maven {
+        name = "SciJava"
+        url = uri("https://maven.scijava.org/content/groups/public/")
+    }
 }
 
 extra["springAiVersion"] = "1.0.1"
@@ -33,6 +37,9 @@ dependencies {
 	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
 	developmentOnly("org.springframework.ai:spring-ai-spring-boot-docker-compose")
     implementation("org.springframework.ai:spring-ai-starter-model-ollama")
+    implementation("cisd:jhdf5:19.04.0")
+    implementation("com.opencsv:opencsv:5.7.1")
+    implementation("org.slf4j:slf4j-simple:1.7.36")
 
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gen-playlists-rag
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      embedding:
+        model: nomic-embed-text  # or another embedding model
+        options:
+          temperature: 0.0
+    vectorstore:
+      qdrant:
+        host: localhost
+        port: 6334  # gRPC port for the client
+        use-tls: false
+        collection-name: songs_collection
